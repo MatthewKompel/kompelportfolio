@@ -9,7 +9,7 @@ import FallbackSpinner from './FallbackSpinner';
 import banff from '../banff.jpg';
 import rowing from '../row2.png';
 import piano from '../piano.png';
-import drone from '../cutdrone.mp4';
+import drone from '../droneshot.png';
 import youtube from '../youtube.png';
 
 const styles = {
@@ -109,9 +109,7 @@ function About(props) {
                 <br />
                 <Row style={{ justifyContent: 'center', alignItems: 'center', display: 'flex' }}>
                   <Col style={styles.introImageContainerRight}>
-                    <video controls={false} autoPlay loop muted style={{ width: '500px', height: '420px' }}>
-                      <source src={drone} type="video/mp4" />
-                    </video>
+                    <img src={drone} alt="profile" style={{ width: '450px', height: '300px' }} />
                   </Col>
                   <Col style={styles.introTextContainerRight}>
                     {parseIntro("I have a DJI Mini Pro 3 drone and I love flying it around when I'm travelling to a new area, or just exploring parts of my hometown.  It offers a really cool perspective, with views and angles of the area around me that I never would have imagined possible.\n\nThis hobby has also given me a chance to learn a lot more about lighting and camera shot quality, becuase there is so much that goes into getting the best drone footage possible.")}
