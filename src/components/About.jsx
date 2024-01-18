@@ -9,7 +9,7 @@ import FallbackSpinner from './FallbackSpinner';
 import banff from '../banff.jpg';
 import rowing from '../row2.png';
 import piano from '../piano.png';
-import drone from '../cutdrone.mov';
+import drone from '../cutdrone.mp4';
 import youtube from '../youtube.png';
 
 const styles = {
