@@ -1,12 +1,24 @@
 {
     "social": [        
         {
+            "network" : "linkedin",
+            "href": "https://www.linkedin.com/in/matthew-kompel-716144203/"
+        },
+        {
             "network" : "github",
-            "href": "https://github.com/codeRockStar1992"
+            "href": "https://github.com/MatthewKompel"
         },
         {
             "network" : "email",
-            "href": "mailto:19920109johnolson@gmail.com"
+            "href": "mailto:matthewkompel@gmail.com"
+        },
+        {
+            "network" : "youtube",
+            "href": "https://www.youtube.com/channel/UCprh0fwYOLQpCh8xbZale7w"
+        },
+        {
+            "network": "instagram",
+            "href": "https://www.instagram.com/matthew_kompel/?hl=en"
         }
     ]
 }

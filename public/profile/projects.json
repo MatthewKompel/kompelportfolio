@@ -1,88 +1,59 @@
 {
     "projects" : [
         {
-            "image" : "images/projects/partswarehouse-app.png",
-            "title": "PartsWarehouse",
-            "bodyText": "",
-            "links": [
+            "image" : "images/cacowebb.png",
+            "title": "SMS AI Campus Assistant",
+            "bodyText": "This is an SMS texting assistant built for on campus university students, to help handle any problems they might have. Designed to help with anything from mental health resources to booking library rooms.\n\nHosted through a serverless lambda function on AWS, with twilio as the SMS number provider.",
+            "links": [{"href": "https://www.youtube.com/watch?v=qJBBOnINCv8&ab_channel=CacoDev", "text": "SMS Video Demo"},{"href": "https://github.com/dev-caco/webappcaco", "text": "Web App GitHub"}
             ],
             "tags" : [
-                "PHP",
-                "Laravel",
-                "Blade",
-                "MySQL",
-                "Bootstrap"
+                "JavaScript",
+                "MongoDB",
+                "AWS",
+                "GCP",
+                "Twilio"
             ]
         },
         {
-            "image" : "images/projects/rental-car-app.png",
-            "title": "Rental Car App",
-            "bodyText": "",
-            "links": [
-            ],
-            "tags" : [
-                "Angular",
-                "AngularJS",
-                "Bootstrap",
-                "HTML",
-                "CSS"
-            ]
-        },
-        {
-            "image" : "images/projects/uniplaces-home.png",
-            "title": "Home Renting App",
-            "bodyText": "",
-            "links": [
+            "image" : "images/sen5.png",
+            "title": "Stock Sentiment Analysis Tool",
+            "bodyText": "This project was created with the intention of providing valuable insight to users about the different stocks available on the market, in order to help make better investment decisions.\n\nThe UI was developed with React, and the server for pulling stock information was implemented with Flask.\n",
+            "links": [{"href": "https://github.com/queens-web-development-club/sentars-site", "text": "GitHub"}
             ],
             "tags" : [
                 "React",
-                "Next",
                 "JavaScript",
-                "Node",
-                "API",
-                "MySQL"
-            ]
-        },
-        {
-            "image" : "images/projects/remax-app.png",
-            "title": "Real Estate App",
-            "bodyText": "",
-            "links": [
-            ],
-            "tags" : [
-                "Vue",
-                "Nuxt",
-                "Node",
-                "API",
-                "Tailwind CSS",
-                "JavaScript"
-            ]
-        },
-        {
-            "image" : "images/projects/listy-app.png",
-            "title": "Listy App",
-            "bodyText": "",
-            "links": [
-            ],
-            "tags" : [
-                "WordPress",
-                "WordPress Theme",
-                "WordPress Plugin",
+                "Flask",
+                "Python",
                 "HTML",
                 "CSS"
             ]
         },
         {
-            "image" : "images/projects/winedepot-app.png",
-            "title": "Wine Depot",
-            "bodyText": "",
-            "links": [
-                
+            "image" : "images/rid2.png",
+            "title": "Riddle Mobile App",
+            "bodyText": "This project is a mobile app that implements a unique riddle of the day for users to try to solve within a certain amount of guesses. User account stats and guess history are tracked in a NoSQL database, and the riddle is updated daily at midnight through an automatic CRON AWS lambda function.",
+            "links": [{"href": "https://github.com/MatthewKompel/Riddle-Mobile-App", "text": "Mobile App GitHub"}, {"href": "https://github.com/MatthewKompel/riddleBackend/tree/main", "text": "Backend GitHub"}
             ],
             "tags" : [
-                "Shopify",
-                "Shopify Theme",
-                "HTML"
+                "React Native",
+                "MongoDB",
+                "Node JS",
+                "Express JS",
+                "AWS"
+            ]
+        },
+        {
+            "image" : "images/ev2.png",
+            "title": "Find Your EV",
+            "bodyText": "With the recent popularity spike in electric vehicles, this web app was developed to help users narrow down their search and find an ideal EV. Based on user preferences for metrics like price, size, and power, a set of suitable EVs from various brands is presented to the user.",
+            "links": [{"href": "https://github.com/MatthewKompel/henryinqz.github.io", "text": "GitHub"}
+            ],
+            "tags" : [
+                "Python",
+                "Flask",
+                "HTML",
+                "CSS"
             ]
         }
     ]

@@ -22,7 +22,7 @@ const styles = {
     fontWeight: 700,
   },
   cardTextStyle: {
-    textAlign: 'left',
+    textAlign: 'center',
   },
   linkStyle: {
     textDecoration: 'none',
