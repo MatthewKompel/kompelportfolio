@@ -120,7 +120,7 @@ function About(props) {
                 <br />
                 <Row style={{ justifyContent: 'center', alignItems: 'center', display: 'flex' }}>
                   <Col style={styles.introTextContainer}>
-                    {parseIntro('During my internship at STAN AI I began making videos going over different concepts and technologies I was using on a day to day basis. I try to make videos on things I struggled to understand in the first place, because I am sure there are others online who will struggle to understand them as well.\n\nFor now I have just stuck to software related vidoes, but in the future I hope to branch out to other topics as well.')}
+                    {parseIntro('During my internship at STAN AI, I began making videos going over different concepts and technologies I was using on a day to day basis. I try to make videos on things I struggled to understand in the first place, because I am sure there are others online who will struggle to understand them as well.\n\nFor now I have just stuck to software related vidoes, but in the future I hope to branch out to other topics as well.')}
                   </Col>
                   <Col style={styles.introImageContainer}>
                     <img src={youtube} alt="profile" style={{ width: '575px', height: '300px' }} />
