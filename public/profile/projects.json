@@ -1,6 +1,20 @@
 {
     "projects" : [
         {
+            "image" : "images/nucl.png",
+            "title": "Nucleus",
+            "bodyText": "The ultimate task management and study tool for students. It allows users to have their course syllabi automatically parsed and all deadlines and deliverables extracted to make planning easy. Implemented courses listing, calendar viewing, and task lists.\n\nGoogle calendar integration and SMS notification reminders are set up for whitelisted users.",
+            "links": [{"href": "https://www.nucleusapp.ca/login", "text": "Live Website"}, {"href": "https://www.linkedin.com/company/teamnucleus/posts/?feedView=all", "text": "LinkedIn"}
+            ],
+            "tags" : [
+                "AWS",
+                "JavaScript",
+                "React",
+                "Apache Maven",
+                "MongoDB"
+            ]
+        },
+        {
             "image" : "images/cacowebb.png",
             "title": "SMS AI Campus Assistant",
             "bodyText": "This is an SMS texting assistant built for on campus university students, to help handle any problems they might have. Designed to help with anything from mental health resources to booking library rooms.\n\nHosted through a serverless lambda function on AWS, with twilio as the SMS number provider.",
@@ -17,7 +31,7 @@
         {
             "image" : "images/sen5.png",
             "title": "Stock Sentiment Analysis Tool",
-            "bodyText": "This project was created with the intention of providing valuable insight to users about the different stocks available on the market, in order to help make better investment decisions.\n\nThe UI was developed with React, and the server for pulling stock information was implemented with Flask.\n",
+            "bodyText": "This project was created to provide valuable insight to users about the different stocks available on the market, to help make better investment decisions.\n\nThe UI was developed with React, and the server for pulling stock information was implemented with Flask.\n",
             "links": [{"href": "https://github.com/queens-web-development-club/sentars-site", "text": "GitHub"}
             ],
             "tags" : [
@@ -32,28 +46,15 @@
         {
             "image" : "images/rid2.png",
             "title": "Riddle Mobile App",
-            "bodyText": "This project is a mobile app that implements a unique riddle of the day for users to try to solve within a certain amount of guesses. User account stats and guess history are tracked in a NoSQL database, and the riddle is updated daily at midnight through an automatic CRON AWS lambda function.",
+            "bodyText": "This project is a mobile app that implements a unique riddle of the day for users to try to solve within a certain amount of guesses.\n\nUser account stats and guess history are tracked in a NoSQL database, and the riddle is updated daily at midnight through an automatic CRON AWS lambda function.",
             "links": [{"href": "https://github.com/MatthewKompel/Riddle-Mobile-App", "text": "Mobile App GitHub"}, {"href": "https://github.com/MatthewKompel/riddleBackend/tree/main", "text": "Backend GitHub"}
             ],
             "tags" : [
+                "AWS",
                 "React Native",
                 "MongoDB",
                 "Node JS",
-                "Express JS",
-                "AWS"
-            ]
-        },
-        {
-            "image" : "images/ev2.png",
-            "title": "Find Your EV",
-            "bodyText": "With the recent popularity spike in electric vehicles, this web app was developed to help users narrow down their search and find an ideal EV. Based on user preferences for metrics like price, size, and power, a set of suitable EVs from various brands is presented to the user.",
-            "links": [{"href": "https://github.com/MatthewKompel/henryinqz.github.io", "text": "GitHub"}
-            ],
-            "tags" : [
-                "Python",
-                "Flask",
-                "HTML",
-                "CSS"
+                "Express JS"
             ]
         }
     ]
