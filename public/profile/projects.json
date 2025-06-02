@@ -1,14 +1,28 @@
 {
     "projects" : [
         {
-            "image" : "images/nucl.png",
-            "title": "Nucleus",
-            "bodyText": "The ultimate task management and study tool for students. It allows users to have their course syllabi automatically parsed and all deadlines and deliverables extracted to make planning easy. Implemented courses listing, calendar viewing, and task lists.\n\nGoogle calendar integration and SMS notification reminders are set up for whitelisted users.",
-            "links": [{"href": "https://www.nucleusapp.ca/login", "text": "Live Website"}, {"href": "https://www.linkedin.com/company/teamnucleus/posts/?feedView=all", "text": "LinkedIn"}
+            "image" : "images/advisor2.png",
+            "title": "Advisor Score",
+            "bodyText": "This product provides a frictionless and objective way for clients to understand and visualize how well their financial advisor is performing. Our goal is to equip everyone with the tools they need to make informed financial decisions about their advisor.\n\nOur tool combines industry benchmark statistics with client portfolio performance to deliver the most informed recommendation possible—without a high barrier to entry.",
+            "links": [{"href": "https://advisorscorehome.webflow.io/", "text": "Live Website"}
             ],
             "tags" : [
                 "AWS",
-                "JavaScript",
+                "WebFlow",
+                "MongoDB",
+                "Google Cloud",
+                "Python"
+            ]
+        },
+        {
+            "image" : "images/nucle.png",
+            "title": "Nucleus",
+            "bodyText": "The ultimate task management and study tool for students. It allows users to have their course syllabi automatically parsed, with all deadlines and deliverables extracted to make planning easy. Features include course listings, calendar views, and task lists.\n\nGoogle Calendar integration and SMS notification reminders are set up for whitelisted users, along with full integration with the Student Learning Portal (D2L) for grade data.",
+            "links": [{"href": "https://youtu.be/tAwsiH81biw", "text": "Full Demo Video"}, {"href": "https://www.linkedin.com/company/teamnucleus/posts/?feedView=all", "text": "LinkedIn"}
+            ],
+            "tags" : [
+                "AWS",
+                "Java",
                 "React",
                 "Apache Maven",
                 "MongoDB"
@@ -16,8 +30,8 @@
         },
         {
             "image" : "images/cacowebb.png",
-            "title": "SMS AI Campus Assistant",
-            "bodyText": "This is an SMS texting assistant built for on campus university students, to help handle any problems they might have. Designed to help with anything from mental health resources to booking library rooms.\n\nHosted through a serverless lambda function on AWS, with twilio as the SMS number provider.",
+            "title": "Campus Companion",
+            "bodyText": "An SMS-based assistant built for on-campus university students to help them navigate common challenges. Designed to assist with everything from accessing mental health resources to booking library rooms.\n\nHosted on AWS using a Lambda function, with Twilio as the SMS provider.",
             "links": [{"href": "https://www.youtube.com/watch?v=qJBBOnINCv8&ab_channel=CacoDev", "text": "SMS Video Demo"},{"href": "https://github.com/dev-caco/webappcaco", "text": "Web App GitHub"}
             ],
             "tags" : [
@@ -41,20 +55,6 @@
                 "Python",
                 "HTML",
                 "CSS"
-            ]
-        },
-        {
-            "image" : "images/rid2.png",
-            "title": "Riddle Mobile App",
-            "bodyText": "This project is a mobile app that implements a unique riddle of the day for users to try to solve within a certain amount of guesses.\n\nUser account stats and guess history are tracked in a NoSQL database, and the riddle is updated daily at midnight through an automatic CRON AWS lambda function.",
-            "links": [{"href": "https://github.com/MatthewKompel/Riddle-Mobile-App", "text": "Mobile App GitHub"}, {"href": "https://github.com/MatthewKompel/riddleBackend/tree/main", "text": "Backend GitHub"}
-            ],
-            "tags" : [
-                "AWS",
-                "React Native",
-                "MongoDB",
-                "Node JS",
-                "Express JS"
             ]
         }
     ]

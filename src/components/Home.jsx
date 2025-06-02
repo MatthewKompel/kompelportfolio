@@ -4,9 +4,12 @@ import Fade from 'react-reveal';
 import endpoints from '../constants/endpoints';
 import Social from './Social';
 import FallbackSpinner from './FallbackSpinner';
-import prof from '../prof2.jpg';
+// import prof from '../prof2.jpg';
 import row from '../row.png';
-import piano from '../piano.png';
+// import piano from '../piano.png';
+// import headshot from '../headshot.jpg';
+import skiing from '../skiing.jpg';
+import grad from '../grad2.jpg';
 
 const styles = {
   nameStyle: {
@@ -81,14 +84,14 @@ function Home() {
           </div>
           <div style={styles.imageContainer}>
             <img
-              src={prof} // Replace with your actual image source
+              src={grad} // Replace with your actual image source
               alt="Your Alt Text"
               style={styles.image}
             />
           </div>
           <div style={styles.imageContainer2}>
             <img
-              src={piano} // Replace with your actual image source
+              src={skiing} // Replace with your actual image source
               alt="Your Alt Text"
               style={styles.image}
             />
@@ -101,7 +104,7 @@ function Home() {
             options={{
               loop: false,
               autoStart: true,
-              strings: "a software developer and computing student at Queen's University.",
+              strings: "a Software Developer and Computer Science graduate from Queen's University.",
               delay: 15,
             }}
           />
