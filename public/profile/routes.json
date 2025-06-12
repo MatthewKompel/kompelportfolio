@@ -8,7 +8,12 @@
         {
             "component": "Projects",
             "path": "/projects",
-            "headerTitle": "Projects"
+            "headerTitle": "Projectsssss"
+        },
+        {
+            "component": "Resume",
+            "path": "/resume",
+            "headerTitle": "Resume"
         }
     ]
 }

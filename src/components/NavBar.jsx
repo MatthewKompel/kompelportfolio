@@ -13,8 +13,16 @@ const styles = {
   },
 };
 
+const StyledNavbar = styled(Navbar)`
+  background: ${(props) => props.theme.navbarTheme.background} !important;
+  backdrop-filter: ${(props) => props.theme.navbarTheme.backdrop};
+  transition: all 0.3s ease;
+  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+`;
+
 const ExternalNavLink = styled.a`
   color: ${(props) => props.theme.navbarTheme.linkColor};
+  transition: all 0.3s ease;
   &:hover {
     color: ${(props) => props.theme.navbarTheme.linkHoverColor};
   }
@@ -25,6 +33,7 @@ const ExternalNavLink = styled.a`
 
 const InternalNavLink = styled(NavLink)`
   color: ${(props) => props.theme.navbarTheme.linkColor};
+  transition: all 0.3s ease;
   &:hover {
     color: ${(props) => props.theme.navbarTheme.linkHoverColor};
   }
@@ -51,13 +60,13 @@ const NavBar = () => {
   }, []);
 
   return (
-    <Navbar
+    <StyledNavbar
       fixed="top"
       expand="md"
-      bg="dark"
       variant="dark"
       className="navbar-custom"
       expanded={expanded}
+      theme={theme}
     >
       <Container>
         {data?.logo && (
@@ -113,7 +122,7 @@ const NavBar = () => {
           />
         </Navbar.Collapse>
       </Container>
-    </Navbar>
+    </StyledNavbar>
   );
 };
 

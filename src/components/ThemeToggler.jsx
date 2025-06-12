@@ -1,22 +1,15 @@
 import React from 'react';
 import DarkModeToggle from 'react-dark-mode-toggle';
-import PropTypes from 'prop-types';
 import AppContext from '../AppContext';
 
-function ThemeToggler(props) {
-  const { onClick } = props;
-  const handleOnChange = (darkMode) => {
-    darkMode.toggle();
-    onClick();
-  };
-
+function ThemeToggler() {
   return (
     <>
       <AppContext.Consumer>
         {(values) => (
           <div style={{ marginBottom: 8 }}>
             <DarkModeToggle
-              onChange={() => handleOnChange(values.darkMode)}
+              onChange={values.darkMode.toggle}
               checked={values.darkMode.value}
               size={50}
             />
@@ -26,12 +19,5 @@ function ThemeToggler(props) {
     </>
   );
 }
-
-ThemeToggler.propTypes = {
-  onClick: PropTypes.func,
-};
-ThemeToggler.defaultProps = {
-  onClick: () => {},
-};
 
 export default ThemeToggler;

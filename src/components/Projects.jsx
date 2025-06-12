@@ -1,26 +1,35 @@
-import React, { useState, useEffect } from 'react';
+import React, { useState, useEffect, useContext } from 'react';
 import { Container, Row } from 'react-bootstrap';
-// import { ThemeContext } from 'styled-components';
-import PropTypes from 'prop-types';
+import { ThemeContext } from 'styled-components';
 import Fade from 'react-reveal/Fade';
-import Header from './Header';
 import endpoints from '../constants/endpoints';
 import ProjectCard from './projects/ProjectCard';
 import FallbackSpinner from './FallbackSpinner';
+import useScrollAnimation from '../hooks/useScrollAnimation';
 
-const styles = {
-  containerStyle: {
-    marginBottom: 25,
-  },
-  showMoreStyle: {
-    margin: 25,
-  },
-};
-
-const Projects = (props) => {
-  // const theme = useContext(ThemeContext);
-  const { header } = props;
+const Projects = () => {
+  const theme = useContext(ThemeContext);
   const [data, setData] = useState(null);
+  const projectsGridRef = useScrollAnimation('fade-in', 0.3);
+
+  const styles = {
+    containerStyle: {
+      marginBottom: 25,
+      padding: '2rem 0',
+    },
+    showMoreStyle: {
+      margin: 25,
+    },
+    projectsSection: {
+      padding: '3rem 0',
+      background: theme.background,
+      minHeight: '100vh',
+      transition: 'all 0.3s ease',
+    },
+    projectsGrid: {
+      marginTop: '2rem',
+    },
+  };
 
   useEffect(() => {
     fetch(endpoints.projects, {
@@ -33,27 +42,29 @@ const Projects = (props) => {
   const numberOfItems = data ? data.length : 6;
   return (
     <>
-      <Header title={header} />
-      {data
-        ? (
-          <div className="section-content-container">
-            <Container style={styles.containerStyle}>
-              <Row xs={2} sm={2} md={3} lg={2} className="g-4">
-                {data.projects?.slice(0, numberOfItems).map((project) => (
-                  <Fade key={project.title}>
-                    <ProjectCard project={project} />
-                  </Fade>
-                ))}
-              </Row>
-            </Container>
-          </div>
-        ) : <FallbackSpinner /> }
+      <div style={styles.projectsSection}>
+        {data
+          ? (
+            <div className="section-content-container">
+              <Container style={styles.containerStyle}>
+                <div
+                  ref={projectsGridRef}
+                  style={styles.projectsGrid}
+                >
+                  <Row xs={1} sm={2} md={2} lg={3} className="g-4">
+                    {data.projects?.slice(0, numberOfItems).map((project) => (
+                      <Fade key={project.title} bottom duration={800}>
+                        <ProjectCard project={project} />
+                      </Fade>
+                    ))}
+                  </Row>
+                </div>
+              </Container>
+            </div>
+          ) : <FallbackSpinner /> }
+      </div>
     </>
   );
-};
-
-Projects.propTypes = {
-  header: PropTypes.string.isRequired,
 };
 
 export default Projects;
