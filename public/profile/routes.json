@@ -9,11 +9,6 @@
             "component": "Projects",
             "path": "/projects",
             "headerTitle": "Projectsssss"
-        },
-        {
-            "component": "Resume",
-            "path": "/resume",
-            "headerTitle": "Resume"
         }
     ]
 }
