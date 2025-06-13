@@ -47,6 +47,7 @@ function Resume() {
       border: 'none',
       borderRadius: '12px',
       boxShadow: theme.shadow,
+      display: 'block',
     },
     title: {
       fontSize: '2rem',
@@ -104,8 +105,9 @@ function Resume() {
                 📄 Download Resume (PDF)
               </button>
 
-              <iframe
-                src="/images/MatthewKompelResume2025.pdf"
+              <embed
+                src="/images/MatthewKompelResume2025.pdf#toolbar=0&navpanes=0&scrollbar=0"
+                type="application/pdf"
                 style={styles.pdfContainer}
                 title="Resume PDF"
               />
