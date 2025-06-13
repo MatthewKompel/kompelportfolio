@@ -67,8 +67,8 @@ function Resume() {
 
   const handleDownload = () => {
     const link = document.createElement('a');
-    link.href = '/images/MatthewKompelResume2025.pdf';
-    link.download = 'MatthewKompelResume2025.pdf';
+    link.href = '/images/Matthew_Kompel_Resume.pdf';
+    link.download = 'Matthew_Kompel_Resume.pdf';
     document.body.appendChild(link);
     link.click();
     document.body.removeChild(link);
@@ -106,7 +106,7 @@ function Resume() {
               </button>
 
               <embed
-                src="/images/MatthewKompelResume2025.pdf#toolbar=0&navpanes=0&scrollbar=0"
+                src="/images/Matthew_Kompel_Resume.pdf#toolbar=0&navpanes=0&scrollbar=0"
                 type="application/pdf"
                 style={styles.pdfContainer}
                 title="Resume PDF"
