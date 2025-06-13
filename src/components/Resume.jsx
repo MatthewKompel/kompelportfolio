@@ -1,4 +1,4 @@
-import React, { useContext } from 'react';
+import React, { useContext, useState } from 'react';
 import Fade from 'react-reveal';
 import { ThemeContext } from 'styled-components';
 import useScrollAnimation from '../hooks/useScrollAnimation';
@@ -6,6 +6,7 @@ import useScrollAnimation from '../hooks/useScrollAnimation';
 function Resume() {
   const theme = useContext(ThemeContext);
   const resumeRef = useScrollAnimation('fade-in', 0.3);
+  const [pdfLoading, setPdfLoading] = useState(true);
 
   const styles = {
     resumeSection: {
@@ -48,6 +49,21 @@ function Resume() {
       borderRadius: '12px',
       boxShadow: theme.shadow,
       display: 'block',
+      backgroundColor: 'white',
+    },
+    loadingContainer: {
+      width: '100%',
+      height: '80vh',
+      display: 'flex',
+      alignItems: 'center',
+      justifyContent: 'center',
+      background: theme.cardBackground,
+      borderRadius: '12px',
+      border: `1px solid ${theme.cardBorderColor}`,
+    },
+    loadingText: {
+      color: theme.color,
+      fontSize: '1.1rem',
     },
     title: {
       fontSize: '2rem',
@@ -72,6 +88,10 @@ function Resume() {
     document.body.appendChild(link);
     link.click();
     document.body.removeChild(link);
+  };
+
+  const handlePdfLoad = () => {
+    setPdfLoading(false);
   };
 
   return (
@@ -105,12 +125,28 @@ function Resume() {
                 📄 Download Resume (PDF)
               </button>
 
-              <embed
-                src="/images/Matthew_Kompel_Resume.pdf#toolbar=0&navpanes=0&scrollbar=0"
-                type="application/pdf"
-                style={styles.pdfContainer}
+              {pdfLoading && (
+                <div style={styles.loadingContainer}>
+                  <p style={styles.loadingText}>Loading resume...</p>
+                </div>
+              )}
+
+              <iframe
+                src="/images/Matthew_Kompel_Resume.pdf#toolbar=0&navpanes=0&scrollbar=0&view=FitH"
+                style={{
+                  ...styles.pdfContainer,
+                  display: pdfLoading ? 'none' : 'block',
+                }}
                 title="Resume PDF"
-              />
+                frameBorder="0"
+                onLoad={handlePdfLoad}
+              >
+                <p>
+                  Your browser does not support PDFs. Please
+                  <a href="/images/Matthew_Kompel_Resume.pdf" target="_blank" rel="noopener noreferrer">click here to download the PDF</a>
+                  .
+                </p>
+              </iframe>
             </div>
           </Fade>
         </div>
